@@ -540,6 +540,17 @@ void AP_MotorsMatrix::setup_motors(motor_frame_class frame_class, motor_frame_ty
                     add_motor_raw(AP_MOTORS_MOT_8, -1.0f, -0.333f, AP_MOTORS_MATRIX_YAW_FACTOR_CW,  3);
                     success = true;
                     break;
+               case MOTOR_FRAME_TYPE_HH:
+                    add_motor_raw(AP_MOTORS_MOT_1, -0.388f,  0.893f, AP_MOTORS_MATRIX_YAW_FACTOR_CCW, 1);
+                    add_motor_raw(AP_MOTORS_MOT_2,  0.388f, -0.893f, AP_MOTORS_MATRIX_YAW_FACTOR_CCW, 2);
+                    add_motor_raw(AP_MOTORS_MOT_3,  0.388f,  0.893f, AP_MOTORS_MATRIX_YAW_FACTOR_CW,  3);
+                    add_motor_raw(AP_MOTORS_MOT_4, -0.388f, -0.893f, AP_MOTORS_MATRIX_YAW_FACTOR_CW,  4);
+                    add_motor_raw(AP_MOTORS_MOT_5, -1.0f,    0.647f, AP_MOTORS_MATRIX_YAW_FACTOR_CW, 5); 
+                    add_motor_raw(AP_MOTORS_MOT_6,  1.0f,   -0.647f, AP_MOTORS_MATRIX_YAW_FACTOR_CW, 6);
+                    add_motor_raw(AP_MOTORS_MOT_7,  1.0f,    0.647f, AP_MOTORS_MATRIX_YAW_FACTOR_CCW,  7);
+                    add_motor_raw(AP_MOTORS_MOT_8, -1.0f,   -0.647f, AP_MOTORS_MATRIX_YAW_FACTOR_CCW,  8);
+                    success = true;
+                    break;
                 default:
                     // octa frame class does not support this frame type
                     break;
